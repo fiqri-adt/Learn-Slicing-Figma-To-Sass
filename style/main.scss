@@ -1,0 +1,159 @@
+@import './colors';
+
+$font-weights: (
+    "light": 300,
+    "regular": 400,
+    "medium": 500,
+    "semibold": 600
+);
+
+body {
+    font-family: 'Rubik', sans-serif;
+}
+
+.btn-master{
+    padding: 15px 26px 15px 26px;
+    border-radius: 10px;
+    font-weight: map-get($font-weights, semibold );
+    border: 0;
+}
+
+.btn-primary {
+    @extend .btn-master;
+    color: $white;
+    background: $purple;
+}
+
+.btn-secondary{
+    @extend .btn-master;
+    color: $darpur;
+    background: $sofpur;
+}
+
+.header{
+    font-weight: map-get($font-weights, semibold );
+    color: $navy;
+    font-size: 46px;
+    line-height: 60px;
+    margin-top: 100px;
+}
+.descripsion {
+    margin-top: 20px;
+    margin-bottom: 40px;
+    font-weight: map-get($font-weights, light );
+    color:  $newpur;
+    font-size: 18px;
+    line-height: 30px;
+}
+
+.pricing{
+    background: $white !important;
+    padding: 70px 0 70px 0;
+    margin-top: 70px;
+    .master-card{
+        padding: 30px;
+        border-radius: 22px;
+        .btn{
+            width: 100%;
+            margin-top: 20px;
+        }
+        .item-benefit{
+            margin-bottom: 20px;
+            img{
+                float: left;
+                margin-right: 8px;
+            }
+            p{
+                font-size: 16px;
+                font-weight: map-get($font-weights, medium );
+            }
+        }
+        .name{
+            font-size: 18; 
+            font-weight: map-get($font-weights, medium );
+        }
+        .price{
+            font-size: 36px;
+            font-weight: map-get($font-weights, semibold );
+            margin-top: 16px;
+            margin-bottom: 16px;
+        }
+        .support{
+            font-size: 16px;
+            font-weight: map-get($font-weights, light );
+            margin-bottom: 40px;
+        }
+    }
+    .basic-card{
+        @extend .master-card;
+        background: $lilpur;
+        .name{
+            color: $navy;
+        }
+        .price{
+            color: $navy; 
+
+        }
+        .support{
+            color: $newpur;
+        }
+        .item-benefit{
+            p{
+                color: $navy;
+            }
+        }
+    }
+    .most-card{
+        @extend .master-card;
+        background: $purple;
+        .btn-primary{
+            background: $aqua !important;
+        }
+        .name{
+            color: $white;
+        }
+        .price {
+            color: $white;
+        }
+        .support{
+            color: $supportpur;
+        }
+        .item-benefit{
+            p{
+                color: $white;
+            }
+        }
+    }
+}
+
+.sales{
+    padding-top: 100px;
+    .brand {
+        margin-top: 70px;
+        text-align: center;
+            .brands-logo{
+                width: 724px;
+            }   
+    }
+    .copywriting{
+        padding-left: 180px;
+        
+    }
+}
+
+.navbar-tp {
+    padding-top: 30px;
+    .navbar-nav {
+        li {
+            padding-left: 35px;
+        }
+        .active {
+            color: $purple !important;
+            font-weight: map-get($font-weights, medium ) !important;
+        }
+        .nav-link {
+            color: $navy;
+            font-weight: map-get($font-weights, regular );
+        }
+    }
+}
